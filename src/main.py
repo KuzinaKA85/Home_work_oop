@@ -1,5 +1,6 @@
 from src.category import Category
 from src.product import Product
+from src.utils import read_json, create_objects_from_json
 
 if __name__ == "__main__":
     product1 = Product(
@@ -49,3 +50,7 @@ if __name__ == "__main__":
 
     print(Category.category_count)
     print(Category.product_count)
+
+    raw_data = read_json('../data/products.json')
+    categories_data = create_objects_from_json(raw_data)
+    print(categories_data)
