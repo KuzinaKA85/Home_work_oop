@@ -1,7 +1,12 @@
-def test_product_init(product):
+def test_product_init(product1, product2):
     """Тестируем инициализацию продукта"""
 
-    assert product.name == "Samsung Galaxy S23 Ultra"
-    assert product.description == "256GB, Серый цвет, 200MP камера"
-    assert product.price == 180000.0
-    assert product.quantity == 5
+    assert product1.name == "Samsung Galaxy S23 Ultra"
+    assert product1.description == "256GB, Серый цвет, 200MP камера"
+    assert product1.price == 180000.0
+    assert product1.quantity == 5
+
+    assert product2.name == '55" QLED 4K'
+    assert product2.description == "Фоновая подсветка"
+    assert product2.price == 123000.0
+    assert product2.quantity == 7

@@ -32,5 +32,10 @@ def category2():
 
 
 @pytest.fixture
-def product():
+def product1():
     return Product("Samsung Galaxy S23 Ultra", "256GB, Серый цвет, 200MP камера", 180000.0, 5)
+
+
+@pytest.fixture
+def product2():
+    return Product('55" QLED 4K', "Фоновая подсветка", 123000.0, 7)
