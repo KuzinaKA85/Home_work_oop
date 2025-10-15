@@ -14,6 +14,15 @@ class Product:
         self.__price = price
         self.quantity = quantity
 
+    def __str__(self):
+        return f"{self.name}, {self.price} руб. Остаток: {self.quantity} шт."
+
+    def __add__(self, other):
+        if isinstance(other, Product):
+            return (self.__price * self.quantity) + (other.price * other.quantity)
+        else:
+            raise ValueError("Other не является объектом класса Product")
+
     @classmethod
     def new_product(cls, product_dict):
         return cls(**product_dict)
