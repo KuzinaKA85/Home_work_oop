@@ -10,4 +10,9 @@ class Smartphone(Product):
         self.efficiency = efficiency
         self.memory = memory
 
+    def __add__(self, other):
+        if type(other) is Smartphone:
+            return self.name + other.name
+        raise TypeError
+
 

@@ -9,3 +9,7 @@ class LawnGrass(Product):
         self.color = color
         self.country = country
 
+    def __add__(self, other):
+        if type(other) is LawnGrass:
+            return self.name + other.name
+        raise TypeError
