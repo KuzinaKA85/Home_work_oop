@@ -23,7 +23,6 @@ class Product:
         else:
             raise ValueError("Other не является объектом класса Product")
 
-
     @classmethod
     def new_product(cls, product_dict):
         return cls(**product_dict)
