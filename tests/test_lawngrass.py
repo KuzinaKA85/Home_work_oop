@@ -12,7 +12,7 @@ def test_smartphone_init(lawngrass1):
 
 
 def test_smartphone_add(lawngrass1, lawngrass2):
-    assert lawngrass1 + lawngrass2 == "Газонная траваГазонная трава 2"
+    assert lawngrass1 + lawngrass2 == 16750.0
 
 
 def test_smartphone_add_error(lawngrass1):

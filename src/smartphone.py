@@ -20,5 +20,5 @@ class Smartphone(Product):
 
     def __add__(self, other) -> None:
         if type(other) is Smartphone:
-            return self.name + other.name
+            return (self.price * self.quantity) + (other.price * other.quantity)
         raise TypeError
