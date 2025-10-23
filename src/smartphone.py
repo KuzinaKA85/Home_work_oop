@@ -2,7 +2,7 @@ from src.product import Product
 
 
 class Smartphone(Product):
-    """ Класс-наследник, описывающий свойства продукта"""
+    """Класс-наследник, описывающий свойства продукта"""
 
     efficiency: float
     model: str
