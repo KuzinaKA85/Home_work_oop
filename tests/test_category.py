@@ -1,4 +1,4 @@
-from src.category import Category
+import pytest
 
 
 def test_category_init(category1, category2):
