@@ -1,6 +1,3 @@
-import pytest
-
-
 def test_category_init(category1, category2):
     """Тестируем инициализацию категории продукта"""
 
