@@ -10,7 +10,7 @@ class Category:
     category_count = 0
     product_count = 0
 
-    def __init__(self, name, description, products=None):
+    def __init__(self, name: str, description: str, products=None) -> None:
         """Метод для инициализации экземпляра класса. Задаем значения атрибутам экземпляра"""
 
         self.name = name
@@ -52,3 +52,11 @@ class Category:
     def products_in_list(self, product: Product):
         self.__products.append(product)
         Category.product_count += 1
+
+    def middle_price(self):
+        try:
+            total_price = sum(product.price for product in self.__products)
+            average_price = total_price / len(self.__products)
+            return average_price
+        except ZeroDivisionError:
+            return 0

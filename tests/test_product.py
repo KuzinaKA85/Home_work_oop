@@ -1,3 +1,8 @@
+import pytest
+
+from src.product import Product
+
+
 def test_product_init(product1, product2):
     """Тестируем инициализацию продукта"""
 
@@ -18,3 +23,9 @@ def test_product_str(product1):
 
 def test_product_add(product1, product2):
     assert product1 + product2 == 1761000.0
+
+
+def test_product_with_zero_quantity():
+
+    with pytest.raises(ValueError, match="Товар с нулевым количеством не может быть добавлен"):
+        Product("Бракованный товар", "Неверное количество", 1000.0, 0)
